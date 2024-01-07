@@ -1,0 +1,10 @@
+new_system('p_controller_Libr','Library');
+ open_system('p_controller_Libr');
+ sub_handler=add_block('built-in/Subsystem','p_controller_Libr/sub');
+ add_block('simulink/Sources/In1','p_controller_Libr/sub/Input');
+ add_block('built-in/Gain','p_controller_Libr/sub/KP');
+ add_block('simulink/Sinks/Out1','p_controller_Libr/sub/Output');
+ add_line('p_controller_Libr/sub','Input/1','KP/1');
+ add_line('p_controller_Libr/sub','KP/1','Output/1');
+ set_param('p_controller_Libr/sub','Mask','on');
+ set_param('p_controller_Libr/sub','MaskDisplay','disp(''P_Controller'')','MaskDescription','Proportional controller');

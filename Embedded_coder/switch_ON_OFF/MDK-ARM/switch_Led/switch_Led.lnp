@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"switch_led\startup_stm32f103xb.o"
+"switch_led\main.o"
+"switch_led\gpio.o"
+"switch_led\stm32f1xx_it.o"
+"switch_led\stm32f1xx_hal_msp.o"
+"switch_led\switch_control_led.o"
+"switch_led\stm32f1xx_hal_gpio_ex.o"
+"switch_led\stm32f1xx_hal_tim.o"
+"switch_led\stm32f1xx_hal_tim_ex.o"
+"switch_led\stm32f1xx_hal.o"
+"switch_led\stm32f1xx_hal_rcc.o"
+"switch_led\stm32f1xx_hal_rcc_ex.o"
+"switch_led\stm32f1xx_hal_gpio.o"
+"switch_led\stm32f1xx_hal_dma.o"
+"switch_led\stm32f1xx_hal_cortex.o"
+"switch_led\stm32f1xx_hal_pwr.o"
+"switch_led\stm32f1xx_hal_flash.o"
+"switch_led\stm32f1xx_hal_flash_ex.o"
+"switch_led\stm32f1xx_hal_exti.o"
+"switch_led\system_stm32f1xx.o"
+--strict --scatter "switch_Led\switch_Led.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "switch_Led.map" -o switch_Led\switch_Led.axf
